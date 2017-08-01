@@ -1,24 +1,156 @@
-body {
-  background-color: white;
-  color: black;
-  margin-top: 100px;
-  border: 1px solid black;
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Droid Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 640px;
+  background: #A51E01 url(../img/3.jpg);
+  background-position: top center;
+  background-size: cover;
+}
+
+header, footer {
+  background: #f79850;
+  background: gradient(left top, left bottom, color-stop(0%, #f79850), color-stop(27%, #f79850), color-stop(91%, #ffb152), color-stop(100%, #ffb152));
+  background: -webkit-gradient(linear, left top, left bottom, from(#f79850), color-stop(27%, #f79850), color-stop(91%, #ffb152), to(#ffb152));
+  background: -webkit-linear-gradient(top, #f79850 0%, #f79850 27%, #ffb152 91%, #ffb152 100%);
+  background: linear-gradient(top, #f79850 0%, #f79850 27%, #ffb152 91%, #ffb152 100%);
+  border: solid #F58300 1px;
+  opacity: 0.6;
+}
+
+.logo_text {
+  margin-top: -24px;
+}
+
+.menu {
+  text-align: right;
+}
+
+.menu ul {
+  margin-right: 50px;
+  padding-top: 22px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin: -3px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  padding: 27px 20px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #2B1100;
+}
+
+.menu a:hover {
+  color: #F58300;
+  background-color: #2B1100;
+  padding: 27px 20px;
+}
+
+.language {
+  padding-left: 50px;
+  padding-top: 27px;
+}
+
+.language ul {
+  list-style: none;
+}
+
+.language ul li {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+.language ul li a {
+  color: #2B1100;
+  text-decoration: none;
+}
+
+.language a:hover {
+  color: #F58300;
+}
+
+@media screen and (max-width: 992px) {
+  .menu ul {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    text-align: center;
+  }
+  .logo img {
+    margin: 0 auto;
+  }
+  .menu ul {
+    text-align: center;
+  }
+  .menu ul li a {
+    padding: 20px;
+  }
+  .menu ul li a:hover {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .menu ul {
+    text-align: center;
+    padding: 0;
+    padding-top: 6px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .menu ul li a {
+    padding: 19px 7px;
+    color: #2B1100;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .menu ul li a:hover {
+    padding: 19px 7px;
+  }
+}
+
+.footer-left, .footer-right {
   text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 20px 0;
 }
 
-body p {
-  font-weight: 20px;
-  border: 1px solid yellow;
+.footer-left {
+  font-size: 15px;
+  line-height: 45px;
+  font-weight: bold;
 }
 
-p {
-  background-color: black;
+.footer-right div {
+  position: relative;
+  display: inline-block;
+  margin: 0 25px;
 }
 
-p li {
-  color: white;
+.footer-right div a {
+  color: #2B1100;
+  font-size: 30px;
+}
+
+.footer-right div a i {
+  font-weight: bold;
+}
+
+.footer-right div:hover {
+  bottom: 2px;
 }
