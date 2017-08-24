@@ -19,12 +19,13 @@ html, body {
 	background-size: cover;
 }
 
-header, footer {
+header, footer, .about_us {
 	background: rgba(247,152,80,1);
 	background: gradient(left top, left bottom, color-stop(0%, rgba(247,152,80,1)), color-stop(27%, rgba(247,152,80,1)), color-stop(91%, rgba(255,177,82,1)), color-stop(100%, rgba(255,177,82,1)));
   background: linear-gradient(top, rgba(247,152,80,1) 0%, rgba(247,152,80,1) 27%, rgba(255,177,82,1) 91%, rgba(255,177,82,1) 100%);
 	border: solid #F58300 1px;
 	opacity: 0.6;
+	position: relative;
 }		
 
 .logo_text {
@@ -34,7 +35,6 @@ header, footer {
 .menu {
 	text-align: right;
 	ul {
-		margin-right: 50px;
 		padding-top: 22px;
 		text-decoration: none;
 		font-size: 20px;
@@ -44,9 +44,10 @@ header, footer {
 			margin:-3px;
 			a{
 				text-decoration: none;
-				padding: 27px 20px;
+				padding: 34px 20px;
 				transition: all 0.4s;
 				color: $text_color;
+				line-height: 52px;
 			}
 		}
  	}
@@ -56,18 +57,19 @@ header, footer {
 	a:hover {
 		color: #F58300;
 		background-color: $text_color;
-		padding: 27px 20px;
+		padding: 34px 20px;
 	}
 }
 
 .language {
 	padding-left: 50px;
-  padding-top: 27px;
+  padding-top: 26px;
 	ul {
 		list-style: none;
 		li {
 			display: inline-block;
 			padding-left: 8px;
+			line-height: 40px;
 			a {
 				color: $text_color;
 				text-decoration: none;
@@ -82,58 +84,131 @@ header, footer {
 	}
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px){
 	.menu {
-		ul {
-			margin-right: 20px;
-	 	}
+		text-align: left;
 	}
 }
 
-
-@media screen and (max-width: 768px) {
-	.logo {
-		text-align: center;
-		img {
-			margin: 0 auto;
-		}
-	}
+@media screen and (max-width: 993px){
 	.menu {
 		ul {
-			text-align: center;
+			font-size: 14px;
 			li {
-				a {
-					padding: 20px;
-				}
-				a:hover {
-					padding: 20px;
+				a {	
+					padding: 37px 12px;
 				}
 			}
 		}
 	}
+	.menu a:hover {
+		padding: 37px 12px;
+	}
+	.language {
+		padding-left: 0;
+		ul {
+			font-size: 15px;
+		}
+	}
 }
 
-
-@media screen and (max-width: 544px) {
-.menu {
-	ul {
+@media screen and (max-width: 767px) {
+	.main_logo {
+		margin: 0 auto;
+	}
+	.logo_text {
 		text-align: center;
-		padding: 0;
-		padding-top: 6px;
-		text-decoration: none;
-		font-size: 15px;
-		li {
-			a{
-				padding: 19px 7px;
-				color: $text_color;
-				transition: all 0.4s;
-			}
-			a:hover {
-				padding: 19px 7px;
+	}
+	.menu {
+		ul {
+			li {
+				a {	
+					padding: 32px 15px;
+				}
 			}
 		}
- 	}
-}	
+	}
+	.menu a:hover {
+		padding: 32px 15px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		z-index:1;
+		max-height: 170px;
+		position: relative;
+	}
+	.menu {
+		z-index: 2;
+		min-height: 0px;
+		margin: 0 auto;
+		ul {
+			width: 100%;
+			padding: 5px 0;
+			top: 0;
+			left: 0;
+			border: solid 1px #aaa;
+			background: #FAFAFA url(../img/icon-menu.png) no-repeat 25px;
+			border-radius: 5px;
+			box-shadow: 0 1px 2px rgba(0,0,0,.3);
+			li {
+				display: none;
+				margin: 0;
+				a {
+					display: block;
+					padding: 5px;
+					text-align: center;		
+					padding: 0;			
+				}
+			}
+		}
+		.current {
+			display: block;	
+			a {
+				background: none;
+				color: #666;	
+			}
+		}
+	}
+	.language {
+		display: none;
+	}
+	.menu a:hover {
+		padding: 0;
+	}
+	.menu ul:hover {
+		background-image: none;
+		li {
+			display: block;
+			margin: 0;
+		}
+		.current {
+			background: url(../img/icon-check.png) no-repeat 25px;
+		}
+	}
+	.menu a:hover {
+		padding: 0px 15px;
+	}
+}
+
+.about_us {
+	margin: 50px 20px;
+	font-weight: bold;
+	border-radius: 18px;
+	text-align: justify;
+	.left_block {
+		margin: 10px;
+		.left_information {
+			p {
+				text-indent: 15px;
+				margin-bottom: -20px;
+			}
+			p:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
 }
 
 .footer-left, .footer-right {
